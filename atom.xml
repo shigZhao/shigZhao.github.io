@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shigZhao.me/"/>
-  <updated>2017-01-17T07:08:46.272Z</updated>
+  <updated>2017-01-17T07:08:46.884Z</updated>
   <id>http://www.shigZhao.me/</id>
   
   <author>
@@ -14,25 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.shigZhao.me/2017/01/17/README/"/>
-    <id>http://www.shigZhao.me/2017/01/17/README/</id>
-    <published>2017-01-17T07:08:46.271Z</published>
-    <updated>2017-01-17T07:08:46.272Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ArticleBackupForBlog"><a href="#ArticleBackupForBlog" class="headerlink" title="ArticleBackupForBlog"></a>ArticleBackupForBlog</h1><p>文章备份</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ArticleBackupForBlog&quot;&gt;&lt;a href=&quot;#ArticleBackupForBlog&quot; class=&quot;headerlink&quot; title=&quot;ArticleBackupForBlog&quot;&gt;&lt;/a&gt;ArticleBackupForBlog&lt;/h1&gt;&lt;
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
