@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.shigZhao.me/2017/01/17/hello-world/</loc>
+    
+    <lastmod>2017-01-17T07:08:46.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.shigZhao.me/2017/01/17/README/</loc>
+    
+    <lastmod>2017-01-17T07:08:46.272Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.shigZhao.me/tags/index.html</loc>
     
     <lastmod>2017-01-17T03:30:17.126Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://www.shigZhao.me//404.html</loc>
     
     <lastmod>2017-01-17T03:28:08.638Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.shigZhao.me/2017/01/17/hello-world/</loc>
-    
-    <lastmod>2017-01-17T01:46:22.927Z</lastmod>
     
   </url>
   
