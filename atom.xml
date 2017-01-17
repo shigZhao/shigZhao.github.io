@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>shigZhao&#39;s·Blog</title>
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://www.shigZhao.me/"/>
   <updated>2017-01-17T01:46:22.927Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://www.shigZhao.me/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>shigZhao</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/01/17/hello-world/"/>
-    <id>http://yoursite.com/2017/01/17/hello-world/</id>
+    <link href="http://www.shigZhao.me/2017/01/17/hello-world/"/>
+    <id>http://www.shigZhao.me/2017/01/17/hello-world/</id>
     <published>2017-01-17T01:46:22.927Z</published>
     <updated>2017-01-17T01:46:22.927Z</updated>
     
