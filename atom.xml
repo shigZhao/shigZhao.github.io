@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shigZhao.me/"/>
-  <updated>2017-01-20T09:05:25.966Z</updated>
+  <updated>2017-01-20T09:05:25.964Z</updated>
   <id>http://www.shigZhao.me/</id>
   
   <author>
@@ -14,25 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.shigZhao.me/2017/01/20/README/"/>
-    <id>http://www.shigZhao.me/2017/01/20/README/</id>
-    <published>2017-01-20T09:05:25.966Z</published>
-    <updated>2017-01-20T09:05:25.966Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="BackupForBlog"><a href="#BackupForBlog" class="headerlink" title="BackupForBlog"></a>BackupForBlog</h1><h1 id="www-shigzhao-me"><a href="#www-shigzhao-me" class="headerlink" title="www.shigzhao.me"></a>www.shigzhao.me</h1><h1 id="http-starsky-gitcafe-io-2"><a href="#http-starsky-gitcafe-io-2" class="headerlink" title="[http://starsky.gitcafe.io][2]"></a>[<a href="http://starsky.gitcafe.io][2" target="_blank" rel="external">http://starsky.gitcafe.io][2</a>]</h1><p>文章备份</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;BackupForBlog&quot;&gt;&lt;a href=&quot;#BackupForBlog&quot; class=&quot;headerlink&quot; title=&quot;BackupForBlog&quot;&gt;&lt;/a&gt;BackupForBlog&lt;/h1&gt;&lt;h1 id=&quot;www-shigzhao-me&quot;&gt;&lt;a h
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>windows下使用批处理脚本实现Jdk版本的切换</title>
