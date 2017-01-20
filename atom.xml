@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shigZhao.me/"/>
-  <updated>2017-01-20T01:35:50.674Z</updated>
+  <updated>2017-01-20T01:55:07.649Z</updated>
   <id>http://www.shigZhao.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.shigZhao.me/2017/01/20/windows-jdk-bat/"/>
     <id>http://www.shigZhao.me/2017/01/20/windows-jdk-bat/</id>
     <published>2017-01-19T16:16:15.000Z</published>
-    <updated>2017-01-20T01:35:50.674Z</updated>
+    <updated>2017-01-20T01:55:07.649Z</updated>
     
     <content type="html"><![CDATA[<p></p><h2 id="intro">前言</h2>我们平时在window上做开发的时候，可能需要同时开发两个甚至多个项目，有时不同的项目对JDK的版本要求有区别，这时候我们可能会在一台电脑上安装多个版本的JDK。可环境变量又需要进行修改切换JDK版本，所以在网上找了找可以通过批处理脚本进行环境变量的自由切换。<br><a id="more"></a><p></p>
 <h2 id="JDK路径及环境变量"><a href="#JDK路径及环境变量" class="headerlink" title="JDK路径及环境变量"></a>JDK路径及环境变量</h2><p>具体内容见下图：</p>
@@ -34,6 +34,7 @@
 <p><img src="http://ojm1qq2tg.bkt.clouddn.com/switch.jpg" alt="refreshEnv及脚本"></p>
 <p>双击.bat文件运行批处理脚本，根据提示操作即可,如下图所示:</p>
 <p><img src="http://ojm1qq2tg.bkt.clouddn.com/cmd.jpg" alt="cmd执行结果"><br>执行完后打开cmd,查看jdk版本是否成功。</p>
+<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p>脚本附件点击这里：<img src="http://pan.baidu.com/s/1nvtxyop" alt="脚本附件"></p>
 ]]></content>
     
     <summary type="html">
