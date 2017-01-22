@@ -2388,6 +2388,14 @@ pre .javascript .function {
 .bold {
   font-weight: bold;
 }
+.alignleft {
+  display: inline;
+  float: left;
+}
+.alignright {
+  display: inline;
+  float: right;
+}
 .share {
   padding-left: 40px;
   margin: 1em auto 0.5em;
