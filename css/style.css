@@ -2389,13 +2389,12 @@ pre .javascript .function {
 }
 #alignleft {
   display: inline;
-  padding-right: 0px;
+  padding-right: 334px;
 }
 #alignright {
   display: inline;
 }
 #aligncenter {
-  padding-bottom: 1000px;
   display: inline;
 }
 .share {
