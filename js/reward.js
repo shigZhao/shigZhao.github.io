@@ -57,8 +57,8 @@ function createDash(suffix, extra) {
 
         var url = encodeURIComponent(window.location.href);
 
-        return "<div id=\"aligncenter\"><a href=\"javascript:;\" id=\"dash-tip-id\" class=\"dash-tip\" >" +
-            "<img id=\"dash-img-id\" src=\"/img/dashang.png\" alt=\"打赏\" /></a></div>";
+        return "<a href=\"javascript:;\" id=\"dash-tip-id\" class=\"dash-tip\" >" +
+            "<img id=\"dash-img-id\" src=\"/img/dashang.png\" alt=\"打赏\" /></a>";
     };
 
     dash.dsresetid = function () {
