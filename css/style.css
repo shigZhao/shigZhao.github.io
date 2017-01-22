@@ -2387,23 +2387,8 @@ pre .javascript .function {
 .bold {
   font-weight: bold;
 }
-#alignleft {
-  display: inline;
-  text-align: left;
-  float: left;
-}
-#alignright {
-  display: inline;
-  text-align: right;
-  float: right;
-}
 #aligncenter {
-  clear: both;
   padding-top: 36pt;
-  text-align: left;
-  display: inline;
-  vertical-align: middle;
-  margin: auto;
 }
 .share {
   padding-left: 40px;
