@@ -2389,15 +2389,20 @@ pre .javascript .function {
 }
 .alignleft {
   display: inline;
+  text-align: left;
   float: left;
 }
 .alignright {
   display: inline;
+  text-align: right;
   float: right;
 }
 .aligncenter {
   clear: both;
-  display: block;
+  padding-top: 36pt;
+  text-align: left;
+  display: inline;
+  vertical-align: middle;
   margin: auto;
 }
 .share {
