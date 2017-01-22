@@ -1846,7 +1846,6 @@ aside.comment-bar:active {
   max-width: 45em;
   margin: 1.2em auto 0;
   padding: 0.5em 1.8em;
-  font-size: 0.93rem;
   line-height: 1.6em;
   word-break: break-all;
 }
@@ -2395,6 +2394,11 @@ pre .javascript .function {
 .alignright {
   display: inline;
   float: right;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: auto;
 }
 .share {
   padding-left: 40px;
