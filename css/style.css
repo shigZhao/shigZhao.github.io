@@ -2392,6 +2392,7 @@ pre .javascript .function {
 }
 #alignright {
   display: inline;
+  padding-right: 334px;
 }
 #aligncenter {
   padding-top: 36pt;
