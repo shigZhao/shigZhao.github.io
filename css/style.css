@@ -2387,17 +2387,17 @@ pre .javascript .function {
 .bold {
   font-weight: bold;
 }
-.alignleft {
+#alignleft {
   display: inline;
   text-align: left;
   float: left;
 }
-.alignright {
+#alignright {
   display: inline;
   text-align: right;
   float: right;
 }
-.aligncenter {
+#aligncenter {
   clear: both;
   padding-top: 36pt;
   text-align: left;
