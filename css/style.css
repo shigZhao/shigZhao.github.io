@@ -2389,10 +2389,10 @@ pre .javascript .function {
 }
 #alignleft {
   display: inline;
+  padding-right: 334px;
 }
 #alignright {
   display: inline;
-  padding-right: 334px;
 }
 #aligncenter {
   padding-top: 36pt;
