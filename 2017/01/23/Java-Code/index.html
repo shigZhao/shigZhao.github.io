@@ -15,22 +15,16 @@
 
 
 
-<meta name="description" content="前言我们平时在window上做开发的时候，可能需要同时开发两个甚至多个项目，有时不同的项目对JDK的版本要求有区别，这时候我们可能会在一台电脑上安装多个版本的JDK。可环境变量又需要进行修改切换JDK版本，所以在网上找了找可以通过批处理脚本进行环境变量的自由切换。">
+<meta name="description" content="前言该篇为目录，本系列共有6个部分，逐渐深入到Java的各种技术。包括Java语法基础知识、核心编程、图形编程、网络编程、高级特性。具体内容如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows下使用批处理脚本实现Jdk版本的切换">
-<meta property="og:url" content="http://www.shigZhao.me/2017/01/20/windows-jdk-bat/index.html">
+<meta property="og:title" content="Java编程基础·系列">
+<meta property="og:url" content="http://www.shigZhao.me/2017/01/23/Java-Code/index.html">
 <meta property="og:site_name" content="shigZhao's·Blog">
-<meta property="og:description" content="前言我们平时在window上做开发的时候，可能需要同时开发两个甚至多个项目，有时不同的项目对JDK的版本要求有区别，这时候我们可能会在一台电脑上安装多个版本的JDK。可环境变量又需要进行修改切换JDK版本，所以在网上找了找可以通过批处理脚本进行环境变量的自由切换。">
-<meta property="og:image" content="http://ojm1qq2tg.bkt.clouddn.com/jdklujing.jpg">
-<meta property="og:image" content="http://ojm1qq2tg.bkt.clouddn.com/jdkhuangjingbianliang.jpg">
-<meta property="og:image" content="http://ojm1qq2tg.bkt.clouddn.com/switch.jpg">
-<meta property="og:image" content="http://ojm1qq2tg.bkt.clouddn.com/cmd.jpg">
-<meta property="og:image" content="http://pan.baidu.com/s/1nvtxyop">
-<meta property="og:updated_time" content="2017-02-16T09:52:00.253Z">
+<meta property="og:description" content="前言该篇为目录，本系列共有6个部分，逐渐深入到Java的各种技术。包括Java语法基础知识、核心编程、图形编程、网络编程、高级特性。具体内容如下：">
+<meta property="og:updated_time" content="2017-02-20T15:08:13.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows下使用批处理脚本实现Jdk版本的切换">
-<meta name="twitter:description" content="前言我们平时在window上做开发的时候，可能需要同时开发两个甚至多个项目，有时不同的项目对JDK的版本要求有区别，这时候我们可能会在一台电脑上安装多个版本的JDK。可环境变量又需要进行修改切换JDK版本，所以在网上找了找可以通过批处理脚本进行环境变量的自由切换。">
-<meta name="twitter:image" content="http://ojm1qq2tg.bkt.clouddn.com/jdklujing.jpg">
+<meta name="twitter:title" content="Java编程基础·系列">
+<meta name="twitter:description" content="前言该篇为目录，本系列共有6个部分，逐渐深入到Java的各种技术。包括Java语法基础知识、核心编程、图形编程、网络编程、高级特性。具体内容如下：">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>windows下使用批处理脚本实现Jdk版本的切换 | shigZhao&#39;s·Blog</title>
+<title>Java编程基础·系列 | shigZhao&#39;s·Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-        <div class="body-wrap"><article id="post-windows-jdk-bat" class="article article-type-post" itemscope itemprop="blogPost">
+        <div class="body-wrap"><article id="post-Java-Code" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/20/windows-jdk-bat/" class="article-date">
-      <time datetime="2017-01-19T16:16:15.000Z" itemprop="datePublished">2017-01-20</time>
+      <a href="/2017/01/23/Java-Code/" class="article-date">
+      <time datetime="2017-01-23T06:28:55.420Z" itemprop="datePublished">2017-01-23</time>
 </a>
 
 
@@ -296,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      windows下使用批处理脚本实现Jdk版本的切换
+      Java编程基础·系列
     </h1>
   
 
@@ -305,13 +299,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/脚本工具/">脚本工具</a>
+    <a class="article-category-link" href="/categories/后端技术/">后端技术</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bat脚本/">bat脚本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdk切换/">jdk切换</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -321,20 +315,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p></p><h2 id="intro">前言</h2>我们平时在window上做开发的时候，可能需要同时开发两个甚至多个项目，有时不同的项目对JDK的版本要求有区别，这时候我们可能会在一台电脑上安装多个版本的JDK。可环境变量又需要进行修改切换JDK版本，所以在网上找了找可以通过批处理脚本进行环境变量的自由切换。<br><a id="more"></a><p></p>
-<h2 id="JDK路径及环境变量"><a href="#JDK路径及环境变量" class="headerlink" title="JDK路径及环境变量"></a>JDK路径及环境变量</h2><p>具体内容见下图：</p>
-<h3 id="JDK路径"><a href="#JDK路径" class="headerlink" title="JDK路径"></a>JDK路径</h3><p>下图为我的jdk路径：</p>
-<p><img src="http://ojm1qq2tg.bkt.clouddn.com/jdklujing.jpg" alt="jdk路径"></p>
-<h3 id="JDK环境变量"><a href="#JDK环境变量" class="headerlink" title="JDK环境变量"></a>JDK环境变量</h3><p>下图为我电脑的环境变量：</p>
-<p><img src="http://ojm1qq2tg.bkt.clouddn.com/jdkhuangjingbianliang.jpg" alt="JDK环境变量"></p>
-<p>因为path内容太多，只好截取jdk的path路径: <strong>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</strong><br>脚本如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line"></div><div class="line">rem --- Base Config 配置JDK的安装目录 ---</div><div class="line">:init </div><div class="line">set JAVA_HOME_1_8=D:\shigZhao\Java\jdk1.8.0_92</div><div class="line">set JAVA_HOME_1_6=D:\shigZhao\Java\jdk1.6.0_45</div><div class="line">:start </div><div class="line">echo 当前使用的JDK 版本: </div><div class="line">java -version </div><div class="line">echo. </div><div class="line">echo ============================================= </div><div class="line">echo jdk版本列表 </div><div class="line">echo 1.8 </div><div class="line">echo 1.7</div><div class="line">echo 1.6 </div><div class="line">echo ============================================= </div><div class="line"></div><div class="line">:select</div><div class="line">set /p opt=请选择jdk版本： </div><div class="line">if %opt%==1.8 (</div><div class="line">    set TARGET_JAVA_HOME=%JAVA_HOME_1_8%</div><div class="line">)</div><div class="line">if %opt%==1.7 (</div><div class="line">    set TARGET_JAVA_HOME=%JAVA_HOME_1_7%</div><div class="line">)</div><div class="line">if %opt%==1.6 (</div><div class="line">    set TARGET_JAVA_HOME=%JAVA_HOME_1_6%</div><div class="line">)</div><div class="line"></div><div class="line">echo 当前选择的Java路径:%TARGET_JAVA_HOME%</div><div class="line"></div><div class="line">wmic ENVIRONMENT where &quot;name=&apos;JAVA_HOME&apos;&quot; delete</div><div class="line">wmic ENVIRONMENT create name=&quot;JAVA_HOME&quot;,username=&quot;&lt;system&gt;&quot;,VariableValue=&quot;%TARGET_JAVA_HOME%&quot;</div><div class="line"></div><div class="line">rem -- refresh env ---</div><div class="line">call RefreshEnv</div><div class="line">echo ============================================= </div><div class="line">echo 运行RefreshEnv.exe</div><div class="line">@echo off &amp; setlocal enableextensions  </div><div class="line">echo WScript.Sleep 1000 &gt; %temp%/tmp$$$.vbs  </div><div class="line">set /a i = 5   </div><div class="line">:Timeout  </div><div class="line">if %i% == 0 goto Next  </div><div class="line">setlocal  </div><div class="line">set /a i = %i% - 1   </div><div class="line">echo # [%i%]秒后程序开始运行 #  </div><div class="line">cscript //nologo %temp%/tmp$$$.vbs  </div><div class="line">goto Timeout  </div><div class="line">goto End  </div><div class="line">:Next  </div><div class="line">echo.  </div><div class="line">  </div><div class="line">start RefreshEnv.exe</div><div class="line"></div><div class="line">echo ============================================= </div><div class="line">echo 修改后的JDK 版本: </div><div class="line">java -version </div><div class="line">echo. </div><div class="line">echo 请按任意键退出!   </div><div class="line">pause&gt;nul</div><div class="line"></div><div class="line">@echo on</div></pre></td></tr></table></figure></p>
-<p>我们只需要修改jdk版本的路径就可以动态的切换JAVA_HOME的环境变量。然后运行RefreshEnv.exe来刷新环境变量的值。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>将上述的批处理脚本代码保存为.bat文件，并将RefreshEnv.exe辅助软件和.bat脚本文件放到同一个目录下,如下图所示:</p>
-<p><img src="http://ojm1qq2tg.bkt.clouddn.com/switch.jpg" alt="refreshEnv及脚本"></p>
-<p>双击.bat文件运行批处理脚本，根据提示操作即可,如下图所示:</p>
-<p><img src="http://ojm1qq2tg.bkt.clouddn.com/cmd.jpg" alt="cmd执行结果"><br>执行完后打开cmd,查看jdk版本是否成功。</p>
-<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p>脚本附件点击这里：<img src="http://pan.baidu.com/s/1nvtxyop" alt="脚本附件"></p>
-
+        <p></p><h2 id="intro">前言</h2>该篇为目录，本系列共有6个部分，逐渐深入到Java的各种技术。包括Java语法基础知识、核心编程、图形编程、网络编程、高级特性。具体内容如下：<br><a id="more"></a><p></p>
+<h2 id="第一部分-Java开发入门"><a href="#第一部分-Java开发入门" class="headerlink" title="第一部分 Java开发入门"></a>第一部分 Java开发入门</h2><h3 id="第一课-Java快速上手"><a href="#第一课-Java快速上手" class="headerlink" title="第一课 Java快速上手"></a>第一课 Java快速上手</h3><h3 id="第二课-JVM内存结构与其调优"><a href="#第二课-JVM内存结构与其调优" class="headerlink" title="第二课 JVM内存结构与其调优"></a>第二课 JVM内存结构与其调优</h3><h3 id="第三课-在Eclipse下开发Java程序"><a href="#第三课-在Eclipse下开发Java程序" class="headerlink" title="第三课 在Eclipse下开发Java程序"></a>第三课 在Eclipse下开发Java程序</h3><h3 id="第四课-在Linux下开发Java程序"><a href="#第四课-在Linux下开发Java程序" class="headerlink" title="第四课 在Linux下开发Java程序"></a>第四课 在Linux下开发Java程序</h3><h2 id="第二部分-Java语法基础"><a href="#第二部分-Java语法基础" class="headerlink" title="第二部分 Java语法基础"></a>第二部分 Java语法基础</h2><h3 id="第五课-Java核心语法详解"><a href="#第五课-Java核心语法详解" class="headerlink" title="第五课 Java核心语法详解"></a>第五课 Java核心语法详解</h3><h3 id="第六课-Java面向对象编程"><a href="#第六课-Java面向对象编程" class="headerlink" title="第六课 Java面向对象编程"></a>第六课 Java面向对象编程</h3><h3 id="第七课-Java面向对象编程扩展"><a href="#第七课-Java面向对象编程扩展" class="headerlink" title="第七课 Java面向对象编程扩展"></a>第七课 Java面向对象编程扩展</h3><h3 id="第八课-Java编码规范与样式"><a href="#第八课-Java编码规范与样式" class="headerlink" title="第八课 Java编码规范与样式"></a>第八课 Java编码规范与样式</h3><h2 id="第三部分-Java核心编程"><a href="#第三部分-Java核心编程" class="headerlink" title="第三部分 Java核心编程"></a>第三部分 Java核心编程</h2><h3 id="第九课-Java输入-输出流"><a href="#第九课-Java输入-输出流" class="headerlink" title="第九课 Java输入/输出流"></a>第九课 Java输入/输出流</h3><h3 id="第十课-Java多线程编程"><a href="#第十课-Java多线程编程" class="headerlink" title="第十课 Java多线程编程"></a>第十课 Java多线程编程</h3><h3 id="第十一课-Java常用实体类"><a href="#第十一课-Java常用实体类" class="headerlink" title="第十一课 Java常用实体类"></a>第十一课 Java常用实体类</h3><h3 id="第十二课-Java常用集合类"><a href="#第十二课-Java常用集合类" class="headerlink" title="第十二课 Java常用集合类"></a>第十二课 Java常用集合类</h3><h3 id="第十三课-Java正则表达式"><a href="#第十三课-Java正则表达式" class="headerlink" title="第十三课 Java正则表达式"></a>第十三课 Java正则表达式</h3><h3 id="第十四课-XML与属性文件"><a href="#第十四课-XML与属性文件" class="headerlink" title="第十四课 XML与属性文件"></a>第十四课 XML与属性文件</h3><h2 id="第四部分-Java图形编程"><a href="#第四部分-Java图形编程" class="headerlink" title="第四部分 Java图形编程"></a>第四部分 Java图形编程</h2><h3 id="第十五课-Java-GUI库对比"><a href="#第十五课-Java-GUI库对比" class="headerlink" title="第十五课 Java GUI库对比"></a>第十五课 Java GUI库对比</h3><h3 id="第十六课-AWT图形界面开发"><a href="#第十六课-AWT图形界面开发" class="headerlink" title="第十六课 AWT图形界面开发"></a>第十六课 AWT图形界面开发</h3><h3 id="第十七课-AWT多媒体编程"><a href="#第十七课-AWT多媒体编程" class="headerlink" title="第十七课 AWT多媒体编程"></a>第十七课 AWT多媒体编程</h3><h3 id="第十八课-Swing图形界面开发"><a href="#第十八课-Swing图形界面开发" class="headerlink" title="第十八课 Swing图形界面开发"></a>第十八课 Swing图形界面开发</h3><h3 id="第十九课-SWT图形界面开发"><a href="#第十九课-SWT图形界面开发" class="headerlink" title="第十九课 SWT图形界面开发"></a>第十九课 SWT图形界面开发</h3><h3 id="第二十课-SWT增强组件库JFace"><a href="#第二十课-SWT增强组件库JFace" class="headerlink" title="第二十课 SWT增强组件库JFace"></a>第二十课 SWT增强组件库JFace</h3><h3 id="第二十一课-Applet组件编程"><a href="#第二十一课-Applet组件编程" class="headerlink" title="第二十一课 Applet组件编程"></a>第二十一课 Applet组件编程</h3><h2 id="第五部分-Java网络编程"><a href="#第五部分-Java网络编程" class="headerlink" title="第五部分 Java网络编程"></a>第五部分 Java网络编程</h2><h3 id="第二十二课-Java网络编程"><a href="#第二十二课-Java网络编程" class="headerlink" title="第二十二课 Java网络编程"></a>第二十二课 Java网络编程</h3><h3 id="第二十三课-NIO非阻塞编程"><a href="#第二十三课-NIO非阻塞编程" class="headerlink" title="第二十三课 NIO非阻塞编程"></a>第二十三课 NIO非阻塞编程</h3><h3 id="第二十四课-RMI分布式网络编程"><a href="#第二十四课-RMI分布式网络编程" class="headerlink" title="第二十四课 RMI分布式网络编程"></a>第二十四课 RMI分布式网络编程</h3><h3 id="第二十五课-CORBA分布式网络编程"><a href="#第二十五课-CORBA分布式网络编程" class="headerlink" title="第二十五课 CORBA分布式网络编程"></a>第二十五课 CORBA分布式网络编程</h3><h2 id="第六部分-Java高级特性"><a href="#第六部分-Java高级特性" class="headerlink" title="第六部分 Java高级特性"></a>第六部分 Java高级特性</h2><h3 id="第二十六课Java反射编程与动态代理"><a href="#第二十六课Java反射编程与动态代理" class="headerlink" title="第二十六课Java反射编程与动态代理"></a>第二十六课Java反射编程与动态代理</h3><h3 id="Java泛型编程"><a href="#Java泛型编程" class="headerlink" title="Java泛型编程"></a>Java泛型编程</h3><h3 id="Java注释符编程"><a href="#Java注释符编程" class="headerlink" title="Java注释符编程"></a>Java注释符编程</h3><h3 id="Java-5-0语言新特性"><a href="#Java-5-0语言新特性" class="headerlink" title="Java 5.0语言新特性"></a>Java 5.0语言新特性</h3>
       
     </div>
     
@@ -404,21 +386,21 @@
     
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/01/20/windows-jdk-bat/">windows下使用批处理脚本实现Jdk版本的切换</a></p>
+        <p><span>本文标题:</span><a href="/2017/01/23/Java-Code/">Java编程基础·系列</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">shigZhao</a></p>
-        <p><span>发布时间:</span>2017-01-20, 00:16:15</p>
-        <p><span>最后更新:</span>2017-02-16, 17:52:00</p>
+        <p><span>发布时间:</span>2017-01-23, 14:28:55</p>
+        <p><span>最后更新:</span>2017-02-20, 23:08:13</p>
         
 			<p>
 				<span>更新历史：:</span><i class="fa fa-github"></i>
-				<a href="https://github.com/shigZhao/BackupForBlog/blame/master/_posts/2017-01-20.windows-jdk-bat.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
-				<a href="https://github.com/shigZhao/BackupForBlog/commits/master/_posts/2017-01-20.windows-jdk-bat.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式：</span><i class="fa fa-file-text-o"></i>
-				<a href="https://raw.githubusercontent.com/shigZhao/BackupForBlog/master/_posts/2017-01-20.windows-jdk-bat.md" title="查看 &amp; 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
+				<a href="https://github.com/shigZhao/BackupForBlog/blame/master/_posts/2017-01-23.Java-Code.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+				<a href="https://github.com/shigZhao/BackupForBlog/commits/master/_posts/2017-01-23.Java-Code.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式：</span><i class="fa fa-file-text-o"></i>
+				<a href="https://raw.githubusercontent.com/shigZhao/BackupForBlog/master/_posts/2017-01-23.Java-Code.md" title="查看 &amp; 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
 			</p>
 		
 		<p>
-            <span>原始链接:</span><a class="post-url" href="/2017/01/20/windows-jdk-bat/" title="windows下使用批处理脚本实现Jdk版本的切换">http://www.shigZhao.me/2017/01/20/windows-jdk-bat/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.shigZhao.me/2017/01/20/windows-jdk-bat/　　作者: shigZhao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/23/Java-Code/" title="Java编程基础·系列">http://www.shigZhao.me/2017/01/23/Java-Code/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.shigZhao.me/2017/01/23/Java-Code/　　作者: shigZhao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -430,12 +412,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/01/23/Java-Code/">
-                    Java编程基础·系列
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/01/20/windows-jdk-bat/">
+                    windows下使用批处理脚本实现Jdk版本的切换
                 </a>
             </div>
-        
         
     </nav>
 
@@ -445,7 +427,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK路径及环境变量"><span class="toc-number">2.</span> <span class="toc-text">JDK路径及环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK路径"><span class="toc-number">2.1.</span> <span class="toc-text">JDK路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK环境变量"><span class="toc-number">2.2.</span> <span class="toc-text">JDK环境变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-number">3.</span> <span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附件"><span class="toc-number">4.</span> <span class="toc-text">附件</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一部分-Java开发入门"><span class="toc-number">2.</span> <span class="toc-text">第一部分 Java开发入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一课-Java快速上手"><span class="toc-number">2.1.</span> <span class="toc-text">第一课 Java快速上手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二课-JVM内存结构与其调优"><span class="toc-number">2.2.</span> <span class="toc-text">第二课 JVM内存结构与其调优</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三课-在Eclipse下开发Java程序"><span class="toc-number">2.3.</span> <span class="toc-text">第三课 在Eclipse下开发Java程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四课-在Linux下开发Java程序"><span class="toc-number">2.4.</span> <span class="toc-text">第四课 在Linux下开发Java程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二部分-Java语法基础"><span class="toc-number">3.</span> <span class="toc-text">第二部分 Java语法基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第五课-Java核心语法详解"><span class="toc-number">3.1.</span> <span class="toc-text">第五课 Java核心语法详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第六课-Java面向对象编程"><span class="toc-number">3.2.</span> <span class="toc-text">第六课 Java面向对象编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第七课-Java面向对象编程扩展"><span class="toc-number">3.3.</span> <span class="toc-text">第七课 Java面向对象编程扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第八课-Java编码规范与样式"><span class="toc-number">3.4.</span> <span class="toc-text">第八课 Java编码规范与样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三部分-Java核心编程"><span class="toc-number">4.</span> <span class="toc-text">第三部分 Java核心编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第九课-Java输入-输出流"><span class="toc-number">4.1.</span> <span class="toc-text">第九课 Java输入/输出流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十课-Java多线程编程"><span class="toc-number">4.2.</span> <span class="toc-text">第十课 Java多线程编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十一课-Java常用实体类"><span class="toc-number">4.3.</span> <span class="toc-text">第十一课 Java常用实体类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十二课-Java常用集合类"><span class="toc-number">4.4.</span> <span class="toc-text">第十二课 Java常用集合类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十三课-Java正则表达式"><span class="toc-number">4.5.</span> <span class="toc-text">第十三课 Java正则表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十四课-XML与属性文件"><span class="toc-number">4.6.</span> <span class="toc-text">第十四课 XML与属性文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四部分-Java图形编程"><span class="toc-number">5.</span> <span class="toc-text">第四部分 Java图形编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第十五课-Java-GUI库对比"><span class="toc-number">5.1.</span> <span class="toc-text">第十五课 Java GUI库对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十六课-AWT图形界面开发"><span class="toc-number">5.2.</span> <span class="toc-text">第十六课 AWT图形界面开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十七课-AWT多媒体编程"><span class="toc-number">5.3.</span> <span class="toc-text">第十七课 AWT多媒体编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十八课-Swing图形界面开发"><span class="toc-number">5.4.</span> <span class="toc-text">第十八课 Swing图形界面开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十九课-SWT图形界面开发"><span class="toc-number">5.5.</span> <span class="toc-text">第十九课 SWT图形界面开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十课-SWT增强组件库JFace"><span class="toc-number">5.6.</span> <span class="toc-text">第二十课 SWT增强组件库JFace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十一课-Applet组件编程"><span class="toc-number">5.7.</span> <span class="toc-text">第二十一课 Applet组件编程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五部分-Java网络编程"><span class="toc-number">6.</span> <span class="toc-text">第五部分 Java网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十二课-Java网络编程"><span class="toc-number">6.1.</span> <span class="toc-text">第二十二课 Java网络编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十三课-NIO非阻塞编程"><span class="toc-number">6.2.</span> <span class="toc-text">第二十三课 NIO非阻塞编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十四课-RMI分布式网络编程"><span class="toc-number">6.3.</span> <span class="toc-text">第二十四课 RMI分布式网络编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十五课-CORBA分布式网络编程"><span class="toc-number">6.4.</span> <span class="toc-text">第二十五课 CORBA分布式网络编程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第六部分-Java高级特性"><span class="toc-number">7.</span> <span class="toc-text">第六部分 Java高级特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十六课Java反射编程与动态代理"><span class="toc-number">7.1.</span> <span class="toc-text">第二十六课Java反射编程与动态代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java泛型编程"><span class="toc-number">7.2.</span> <span class="toc-text">Java泛型编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java注释符编程"><span class="toc-number">7.3.</span> <span class="toc-text">Java注释符编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-5-0语言新特性"><span class="toc-number">7.4.</span> <span class="toc-text">Java 5.0语言新特性</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -481,7 +463,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"windows下使用批处理脚本实现Jdk版本的切换　| shigZhao's·Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Java编程基础·系列　| shigZhao's·Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -497,7 +479,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/20/windows-jdk-bat/" data-title="windows下使用批处理脚本实现Jdk版本的切换" data-url="http://www.shigZhao.me/2017/01/20/windows-jdk-bat/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/23/Java-Code/" data-title="Java编程基础·系列" data-url="http://www.shigZhao.me/2017/01/23/Java-Code/"></div>
     <script>
         var duoshuoQuery = {short_name:"shigzhao"};
         var loadComment = function(){
@@ -520,15 +502,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/23/Java-Code/" title="上一篇: Java编程基础·系列">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/01/20/windows-jdk-bat/" title="下一篇: windows下使用批处理脚本实现Jdk版本的切换">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
