@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="shigZhao" />
+
+
+
+<meta name="description" content="前言Java类的基本组成：包、引入、类、变量、方法、注释。如下面案例：
+1234567891011121314151617181920package javacode;		//包import java.util.*;           //引入类/***	@author shigzhao           //注释*/public class HelloWorld&amp;#123;    //定义H">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java类的基本构成">
+<meta property="og:url" content="http://www.shigZhao.me/2017/03/01/JavaCode/index.html">
+<meta property="og:site_name" content="shigZhao's·Blog">
+<meta property="og:description" content="前言Java类的基本组成：包、引入、类、变量、方法、注释。如下面案例：
+1234567891011121314151617181920package javacode;		//包import java.util.*;           //引入类/***	@author shigzhao           //注释*/public class HelloWorld&amp;#123;    //定义H">
+<meta property="og:updated_time" content="2017-03-02T15:45:19.246Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java类的基本构成">
+<meta name="twitter:description" content="前言Java类的基本组成：包、引入、类、变量、方法、注释。如下面案例：
+1234567891011121314151617181920package javacode;		//包import java.util.*;           //引入类/***	@author shigzhao           //注释*/public class HelloWorld&amp;#123;    //定义H">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="shigZhao&#39;s·Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Java类的基本构成 | shigZhao&#39;s·Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?394355ac507949fca9a8485f705f6d14";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+<body>
+<div id="container">
+    <div class="left-col">
+        <!--<div class="overlay"></div>-->
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">shigZhao</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:zhao_sgasy@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/shigZhao" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bat脚本/">bat脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk切换/">jdk切换</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于Java</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+        <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">shigZhao</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">shigZhao</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:zhao_sgasy@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/shigZhao" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+        <div class="body-wrap"><article id="post-JavaCode" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/01/JavaCode/" class="article-date">
+      <time datetime="2017-03-01T07:30:41.000Z" itemprop="datePublished">2017-03-01</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java类的基本构成
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p></p><h2 id="intro">前言</h2>Java类的基本组成：包、引入、类、变量、方法、注释。如下面案例：<p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">package javacode;		//包</div><div class="line"></div><div class="line">import java.util.*;           //引入类</div><div class="line">/**</div><div class="line">*	@author shigzhao           //注释</div><div class="line">*/</div><div class="line">public class HelloWorld&#123;    //定义HelloWorld类</div><div class="line">	private String world = &quot;World&quot;;     //变量</div><div class="line">	</div><div class="line">	public void say()&#123;   //方法</div><div class="line">		System.out.println(&quot;Hello&quot;+world+&quot;!&quot;);    //输出语句</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static void main(String args[])&#123;		//执行方法入口</div><div class="line">		HelloWorld  hello = new HelloWorld();</div><div class="line">		</div><div class="line">		hello.say();	</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>下面详细进行讲解Java的基本组成。<br><a id="more"></a></p>
+<h2 id="包（package）"><a href="#包（package）" class="headerlink" title="包（package）"></a>包（package）</h2><p>因为Java编译器为每个类生成一个字节码文件，且文件名与类名相同，为了防止类名冲突，通过包进行类名管理。</p>
+<h3 id="包的使用语法"><a href="#包的使用语法" class="headerlink" title="包的使用语法"></a>包的使用语法</h3><p>包由关键字package来定义。在类的第一行且无空格，格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">package  包名；</div></pre></td></tr></table></figure></p>
+<h3 id="包的命名规则"><a href="#包的命名规则" class="headerlink" title="包的命名规则"></a>包的命名规则</h3><p>包名统一使用小写，点分隔符之间有且仅有一个自然语义的英语单词。包名统一使用单数形式，但是类名如果有复数含义，类名可以使用复数形式。<br><strong>正例</strong>： 应用工具类包名为 com.alibaba.mpp.util、类名为MessageUtils （此规则参考 spring的框架结构）</p>
+<h2 id="引入（import）"><a href="#引入（import）" class="headerlink" title="引入（import）"></a>引入（import）</h2><p>在Java中，import是用来通知Java编译器的，在这个程序中正在使用当前类外部的其他类。</p>
+<h3 id="import的使用语法"><a href="#import的使用语法" class="headerlink" title="import的使用语法"></a>import的使用语法</h3><p>import位于package的语句后面，必须在类文件的开头。要引入一个类，必须写完整的包名和类名。其语法格式为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import java.util.List;</div></pre></td></tr></table></figure></p>
+<h3 id="import的引入原则"><a href="#import的引入原则" class="headerlink" title="import的引入原则"></a>import的引入原则</h3><p>在源程序中用到了除java.lang包以外的类，无论是系统的类还是自己定义的包中的类，都必须用import语句标识，以通知编译器在编译时找到相应的类文件。</p>
+<h2 id="类（class）"><a href="#类（class）" class="headerlink" title="类（class）"></a>类（class）</h2><p>Java程序的基本单位是类，类的实例是对象。</p>
+<h3 id="类的命名规则"><a href="#类的命名规则" class="headerlink" title="类的命名规则"></a>类的命名规则</h3><p><strong>以下内容出处：《阿里巴巴 JAVA 开发规范手册》</strong><br>类名使用 UpperCamelCase 风格，必须遵从驼峰形式，但以下情形例外：（领域模型<br>的相关命名） DO / DTO / VO / DAO 等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">正例： MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion</div><div class="line">反例： macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion</div></pre></td></tr></table></figure></p>
+<p>抽象类命名使用 Abstract 或 Base 开头；异常类命名使用 Exception 结尾；测试类命<br>名以它要测试的类的名称开始，以 Test 结尾。<br>POJO 类中的任何布尔类型的变量，都不要加 is，否则部分框架解析会引起序列化错<br>误。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">反例： 定义为基本数据类型 boolean isSuccess；的属性，它的方法也是 isSuccess()， RPC</div><div class="line">框架在反向解析的时候， “ 以为” 对应的属性名称是 success，导致属性获取不到，进而抛出</div><div class="line">异常。</div></pre></td></tr></table></figure></p>
+<p>如果使用到了设计模式，建议在类名中体现出具体模式。<br>说明： 将设计模式体现在名字中，有利于阅读者快速理解架构设计思想。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">正例： public class OrderFactory;</div><div class="line">public class LoginProxy;</div><div class="line">public class ResourceObserver;</div></pre></td></tr></table></figure></p>
+<p>接口类中的方法和属性不要加任何修饰符号（ public 也不要加），保持代码的简洁<br>性，并加上有效的 javadoc 注释。尽量不要在接口里定义变量，如果一定要定义变量，肯定是<br>与接口方法相关，并且是整个应用的基础常量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">正例： 接口方法签名： void f();</div></pre></td></tr></table></figure></p>
+<p>接口基础常量表示： String COMPANY = “alibaba”;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">反例： 接口方法定义： public abstract void f();</div></pre></td></tr></table></figure></p>
+<p><strong>说明</strong>： JDK8 中接口允许有默认实现，那么这个 default 方法，是对所有实现类都有价值的默<br>认实现。<br>枚举类名建议带上 Enum 后缀，枚举成员名称需要全大写，单词间用下划线隔开。<br><strong>说明</strong>： 枚举其实就是特殊的常量类，且构造方法被默认强制是私有。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">正例： 枚举名字： DealStatusEnum；成员名称： SUCCESS / UNKOWN_REASON。</div></pre></td></tr></table></figure></p>
+<h2 id="变量（variable）"><a href="#变量（variable）" class="headerlink" title="变量（variable）"></a>变量（variable）</h2><p>一个类中通常包含数据与函数两种类型的元素，根据变量的不同作用范围，可以将变量分为成员变量和局部变量。</p>
+<h3 id="变量的命名规则"><a href="#变量的命名规则" class="headerlink" title="变量的命名规则"></a>变量的命名规则</h3><p> 变量名可以由字母字符、数字、标点组成。<br> 变量名必须以字符字母、“$”、下划线开头。<br> 变量名不能与Java语言的保留字重名。</p>
+<h3 id="变量的赋值"><a href="#变量的赋值" class="headerlink" title="变量的赋值"></a>变量的赋值</h3><p>变量赋值的两种方法：简单赋值和定义赋值</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>方法是Java的灵魂，他包括2部分：声明和方法体</p>
+<h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><p>一个方法包括声明部分和方法体部分。</p>
+<h4 id="方法声明格式"><a href="#方法声明格式" class="headerlink" title="方法声明格式"></a>方法声明格式</h4><p>访问说明符  [修饰符] 返回值类型 方法名 ([参数列表])，其中”[]”括起来的部分是可选的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public void say()&#123;</div><div class="line">	System.out.println(&quot;Hello&quot;+world+&quot;!&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="方法的3种类型"><a href="#方法的3种类型" class="headerlink" title="方法的3种类型"></a>方法的3种类型</h3><p>根据方法的工作性质，分为以下三类：<br>1、“转换”型：修改内部变量的值。<br>2、”访问型”：将返回内部变量的值。<br>3、“效果型”：通常不返回任何值，而是指向某个动作，如控制台打印信息。</p>
+<h3 id="方法的参数传递"><a href="#方法的参数传递" class="headerlink" title="方法的参数传递"></a>方法的参数传递</h3><p>计算机语言有2种向子程序传递参数的方法。</p>
+<h4 id="值调用"><a href="#值调用" class="headerlink" title="值调用"></a>值调用</h4><p>将参数的值复制到子程序的形式参数中，所以子程序参数的变化并不会影响到用于调用的参数。</p>
+<h4 id="引用调用"><a href="#引用调用" class="headerlink" title="引用调用"></a>引用调用</h4><p>将一个参数的引用传递给形式参数。在子程序中这个引用用于对调用中指定的实际参数进行访问，意味着形式参数的变化会影响到用于调用子程序的参数。<br>Java根据传递的内容使用2种方法。在Java中，当向方法传递一个基本数据类型时，传递的是一个值，当传递的是一个对象时，则按引用传递。</p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>注释有三种：<br>单行注释 “//”<br>多行注释  “/ <em>多行注释</em>/”<br>文档注释： “/<em> </em>/”</p>
+
+      
+    </div>
+    
+  </div>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="toc"
+            src="/js/reward.js"></script>
+    
+    
+<div class="reward " id="copyrightFotdonate">
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+        <!-- btn_donate & tips -->
+        <div id="donate_board" class="donate_bar center">
+            <br/>
+            <br/>
+            <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;"
+               title="点击开始打赏 Donate"></a>
+		<span class="donate_txt">
+			打赏我的人，运气都不会太差~
+		</span>
+
+
+        </div>
+        <!-- /btn_donate & tips -->
+
+        <!-- donate guide -->
+
+        <div id="donate_guide" class="donate_bar center hidden">
+            <br/>
+            <br/>
+            
+            <div width="100%" align="center">
+                <div name="dashmain" id="dash-main-id-87895f" class="dash-main-3 87895f-0.99"></div>
+            </div>
+
+            
+			<div  id="alignleft">
+				<a href="/img/alipay.png" title="用支付宝扫一扫即可~" class="fancybox"
+				   rel="article0">
+					<img src="/img/alipay.png" title="支付宝打赏 Donate" height="190px"
+						 width="auto"/>
+				</a>
+			</div>
+			<div id="alignright">
+				<a href="/img/mycat.png" title="用微信扫一扫即可~" class="fancybox" rel="article0">
+					<img src="/img/mycat.png" title="微信打赏 Donate" height="190px" width="auto"/>
+				</a>
+			</div>
+		<span class="donate_txt">
+			打赏我的人，运气都不会太差~
+		</span>
+
+        </div>
+        <!-- /donate guide -->
+
+        <!-- donate script -->
+        <script type="text/javascript">
+
+        </script>
+        <!-- /donate script -->
+    </div>
+    <!-- /Donate Module -->
+</div>
+
+    
+    
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/01/JavaCode/">Java类的基本构成</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">shigZhao</a></p>
+        <p><span>发布时间:</span>2017-03-01, 15:30:41</p>
+        <p><span>最后更新:</span>2017-03-02, 23:45:19</p>
+        
+			<p>
+				<span>更新历史：:</span><i class="fa fa-github"></i>
+				<a href="https://github.com/shigZhao/BackupForBlog/blame/master/_posts/2017-03-01.JavaCode.md" title="顺序查看文章各部分修改记录" target = "_blank">Blame</a>,
+				<a href="https://github.com/shigZhao/BackupForBlog/commits/master/_posts/2017-03-01.JavaCode.md" title="查看文章有关更新记录" target = "_blank">History</a><span class="raw">文本模式：</span><i class="fa fa-file-text-o"></i>
+				<a href="https://raw.githubusercontent.com/shigZhao/BackupForBlog/master/_posts/2017-03-01.JavaCode.md" title="查看 &amp; 下载文章 Markdown 原始文本" target = "_blank"> .md Raw</a>
+			</p>
+		
+		<p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/01/JavaCode/" title="Java类的基本构成">http://www.shigZhao.me/2017/03/01/JavaCode/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.shigZhao.me/2017/03/01/JavaCode/　　作者: shigZhao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/01/23/Java-Code-Principles/">
+                    Java编程基础·系列
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#包（package）"><span class="toc-number">2.</span> <span class="toc-text">包（package）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#包的使用语法"><span class="toc-number">2.1.</span> <span class="toc-text">包的使用语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包的命名规则"><span class="toc-number">2.2.</span> <span class="toc-text">包的命名规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引入（import）"><span class="toc-number">3.</span> <span class="toc-text">引入（import）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#import的使用语法"><span class="toc-number">3.1.</span> <span class="toc-text">import的使用语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import的引入原则"><span class="toc-number">3.2.</span> <span class="toc-text">import的引入原则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类（class）"><span class="toc-number">4.</span> <span class="toc-text">类（class）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类的命名规则"><span class="toc-number">4.1.</span> <span class="toc-text">类的命名规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量（variable）"><span class="toc-number">5.</span> <span class="toc-text">变量（variable）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量的命名规则"><span class="toc-number">5.1.</span> <span class="toc-text">变量的命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量的赋值"><span class="toc-number">5.2.</span> <span class="toc-text">变量的赋值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-number">6.</span> <span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法的定义"><span class="toc-number">6.1.</span> <span class="toc-text">方法的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法声明格式"><span class="toc-number">6.1.1.</span> <span class="toc-text">方法声明格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法的3种类型"><span class="toc-number">6.2.</span> <span class="toc-text">方法的3种类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法的参数传递"><span class="toc-number">6.3.</span> <span class="toc-text">方法的参数传递</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#值调用"><span class="toc-number">6.3.1.</span> <span class="toc-text">值调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引用调用"><span class="toc-number">6.3.2.</span> <span class="toc-text">引用调用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释"><span class="toc-number">7.</span> <span class="toc-text">注释</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Java类的基本构成　| shigZhao's·Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/01/JavaCode/" data-title="Java类的基本构成" data-url="http://www.shigZhao.me/2017/03/01/JavaCode/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"shigzhao"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//shigzhao.me/js/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/01/23/Java-Code-Principles/" title="下一篇: Java编程基础·系列">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/JavaCode/">Java类的基本构成</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/23/Java-Code-Principles/">Java编程基础·系列</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/windows-jdk-bat/">windows下使用批处理脚本实现Jdk版本的切换</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2017 shigZhao
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</div>
+</body>
+</html>
